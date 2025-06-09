@@ -673,10 +673,26 @@ nav ul li a:hover {
   border: none;
   color: #fff;
   cursor: pointer;
+  align-self: flex-end;
   display: none; /* se muestra solo en móvil */
 }
+.formulario-consumo {
+  width: 90%;
+  max-width: 100%;
+  margin: 1em auto;
+  box-sizing: border-box;
+  padding: 1.2em;
 }
-@media (max-width: 600px) {
+
+.boton-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+
   .hamburguesa {
     display: block;
   }
@@ -700,4 +716,5 @@ nav ul li a:hover {
   .nav-header {
     flex-wrap: wrap;
   }
+  
 }
