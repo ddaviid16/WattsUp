@@ -437,3 +437,38 @@ main {
 .borde-hisense {
   border-left-color: #43a047; /* verde */
 }
+.consejo-usuario {
+  margin-top: 1em;
+  font-size: 0.95em;
+  color: #444;
+  font-style: italic;
+  max-width: 300px;
+}
+.consejo-box {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 4px solid #444;
+  padding: 12px 16px;
+  margin-top: 1.2em;
+  border-radius: 8px;
+  max-width: 340px;
+}
+
+.panel-bajo .consejo-box {
+  border-left-color: #2e7d32;
+}
+
+.panel-medio .consejo-box {
+  border-left-color: #f9a825;
+}
+
+.panel-alto .consejo-box {
+  border-left-color: #c62828;
+}
+
+.consejo-usuario {
+  font-size: 0.95em;
+  line-height: 1.4;
+  color: #333;
+  font-style: italic;
+  margin: 0;
+}

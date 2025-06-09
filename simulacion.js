@@ -57,22 +57,25 @@ function calcularTotal() {
   });
 
   document.getElementById("consumoTotal").textContent = total.toFixed(1) + " KWh";
+const nivel = document.getElementById("nivel");
+const consejo = document.getElementById("consejo");
+const panel = document.getElementById("panelConsumo");
 
-  const nivel = document.getElementById("nivel");
-  const panel = document.getElementById("panelConsumo");
+panel.classList.remove("panel-bajo", "panel-medio", "panel-alto");
 
-  panel.classList.remove("panel-bajo", "panel-medio", "panel-alto");
-
-  if (total < 75) {
-    nivel.textContent = "Consumo Bajo";
-    panel.classList.add("panel-bajo");
-  } else if (total < 200) {
-    nivel.textContent = "Consumo Medio";
-    panel.classList.add("panel-medio");
-  } else {
-    nivel.textContent = "Consumo Alto";
-    panel.classList.add("panel-alto");
-  }
+if (total < 75) {
+  nivel.textContent = "Consumo Bajo";
+  panel.classList.add("panel-bajo");
+  consejo.textContent = "¡Buen trabajo! Sigue cuidando el ambiente (y tu cartera), manteniendo un bajo consumo.";
+} else if (total < 200) {
+  nivel.textContent = "Consumo Medio";
+  panel.classList.add("panel-medio");
+  consejo.textContent = "Estás cerca de un consumo alto. Ten cuidado con el uso excesivo de dispositivos eléctricos.";
+} else {
+  nivel.textContent = "Consumo Alto";
+  panel.classList.add("panel-alto");
+  consejo.textContent = "Se recomienda desconectar los dispositivos de alto consumo cuando no los uses y reducir su uso, si es posible.";
+}
 
   const ctx = document.getElementById("grafica").getContext("2d");
   if (window.chart) window.chart.destroy();
