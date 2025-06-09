@@ -524,3 +524,180 @@ main {
   background-color: #ffdd33;
   transform: scale(1.02);
 }
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5em;
+  }
+
+  .inicio h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  .formulario-consumo {
+    padding: 1em;
+    margin: 1.5em 1em;
+    max-width: 100%;
+  }
+
+  .formulario-consumo select {
+    font-size: 1em;
+    padding: 0.5em;
+  }
+
+  .boton-contenedor {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 1em;
+  }
+
+  .boton-agregar,
+  .boton-simulacion {
+    width: 100%;
+    font-size: 1em;
+    padding: 1em;
+  }
+
+  .lista-dispositivo,
+  .lista-simulacion {
+    margin: 10px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+  }
+
+  .panel-consumo {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 1em;
+    margin: 1em;
+  }
+
+  #grafica {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .usuario-card {
+    width: 95%;
+    flex-direction: column;
+    gap: 0.8em;
+    align-items: stretch;
+  }
+
+  .modal-contenido {
+    width: 90%;
+    padding: 1em;
+  }
+
+  .consejo-box {
+    max-width: 100%;
+    padding: 1em;
+  }
+}
+nav {
+  background-color: #08307a;
+  padding: 1em;
+  color: #fff;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-nav {
+  height: 32px;
+  margin-right: 0.5em;
+}
+
+.titulo-nav {
+  font-size: 1.3em;
+  font-weight: bold;
+  flex-grow: 1;
+  color: #fff;
+}
+
+.hamburguesa {
+  font-size: 1.6em;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 1em;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+    margin-top: 1em;
+  }
+
+  #nav-links.mostrar {
+    display: flex;
+  }
+.hamburguesa {
+  font-size: 1.6em;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* se muestra solo en móvil */
+}
+}
+@media (max-width: 600px) {
+  .hamburguesa {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+    margin-top: 1em;
+  }
+
+  #nav-links.mostrar {
+    display: flex;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+
+  .nav-header {
+    flex-wrap: wrap;
+  }
+}

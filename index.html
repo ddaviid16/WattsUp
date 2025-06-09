@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="index.css">
@@ -13,15 +13,18 @@
     
   </style>
 </head>
+
 <body>
   <header>
     <nav>
       <div class="logo">
         <a href="index.html">
           <img src="bombilla.png" alt="Bombilla encendida como logotipo de WattsUp" width="150" height="55" />
+          
         </a>
+      <button id="menu-toggle" class="hamburguesa">&#9776;</button>
       </div>
-      <ul>
+      <ul id="nav-links" class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="misDispositivos.html">Mis dispositivos</a></li>
         <li><a href="simulacion.html">Simulación</a></li> 
@@ -54,7 +57,7 @@
   </footer>
   <div id="notificacion" class="notificacion oculto"></div>
   <script src="cambiousuarios.js"></script>
-
+  <script src="movil.js"></script>
 </body>
 </html>
 
