@@ -108,10 +108,7 @@ window.onload = () => {
   const usuario = localStorage.getItem('usuarioActivo');
 
   if (!usuario && !location.href.includes("Usuarios.html")) {
-    mostrarNotificacion("Primero selecciona un usuario.");
-    setTimeout(() => {
-      window.location.href = "Usuarios.html";
-    }, 2000);
+    mostrarNotificacion("¡Bienvenida/o! Para continuar, primero registra tu hogar o usuario.");
     return;
   }
 
