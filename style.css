@@ -526,8 +526,6 @@ main {
 }
 @media (max-width: 600px) {
   nav {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 1em;
   }
 
@@ -535,6 +533,10 @@ main {
     flex-direction: column;
     width: 100%;
     gap: 0.5em;
+  }
+  .nav-hamburguesa{
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   .inicio h1 {
@@ -615,6 +617,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1em;
+
 }
 
 .logo-nav {
@@ -674,7 +678,7 @@ nav ul li a:hover {
   color: #fff;
   cursor: pointer;
   align-self: flex-end;
-  display: none; /* se muestra solo en móvil */
+  display: block; /* se muestra solo en móvil */
 }
 .formulario-consumo {
   width: 90%;
