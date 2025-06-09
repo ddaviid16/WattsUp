@@ -1,0 +1,25 @@
+.funcion a {
+  display: inline-block;
+  margin-top: 1em;
+  background: linear-gradient(to right, #ffe066, #ffd633);
+  color: #000;
+  padding: 0.8em 1.6em;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.funcion a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.video-inicio {
+  max-height: 160px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}

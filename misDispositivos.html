@@ -17,9 +17,11 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="misDispositivos.html">Mis dispositivos</a></li>
         <li><a href="simulacion.html">Simulación</a></li> 
+        <li><a href="Usuarios.html">Usuarios</a></li>
       </ul>
     </nav>
   </header>
+  <main>
   <h1>Consulta de Consumo de Energía</h1>
 
   <label for="marca">Marca:</label>
@@ -30,14 +32,19 @@
   <label for="producto">Producto:</label>
   <select id="producto"></select>
 
-  <button onclick="agregarDispositivo()">Agregar</button>
+<div class="boton-contenedor">
+  <button class="boton-agregar" onclick="agregarDispositivo()">Agregar dispositivo</button>
+  <a href="simulacion.html" class="boton-simulacion">📊 Ir a Simulación</a>
+</div>
 
   <h2>Dispositivos seleccionados</h2>
   <ul id="lista"></ul>
 
-  <a href="simulacion.html"><button>Ir a simulación</button></a>
+  
 
   <script src="dispositivos.js"></script>
+  <script src="usuarios.js"></script>
+  </main>
   <footer>
     <p>&copy; 2025 WattsUp. Todos los derechos reservados.</p>
   </footer>

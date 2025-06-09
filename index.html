@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
   <title>WattsUp</title>
   <style>
     
@@ -22,15 +23,16 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="misDispositivos.html">Mis dispositivos</a></li>
         <li><a href="simulacion.html">Simulación</a></li> 
+        <li><a href="Usuarios.html">Usuarios</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="inicio">
+      <video src="electricidad.mp4" autoplay muted loop playsinline class="video-inicio"></video>
       <h1>Para entender y controlar el consumo eléctrico en tu hogar.</h1> 
     </section>
-
     <section id="menu" class="funcionalidades">
       <div class="funcion">
         <h2>Mis dispositivos</h2>
@@ -48,6 +50,9 @@
   <footer>
     <p>&copy; 2025 WattsUp. Todos los derechos reservados.</p>
   </footer>
+  <div id="notificacion" class="notificacion oculto"></div>
+  <script src="cambiousuarios.js"></script>
+
 </body>
 </html>
 

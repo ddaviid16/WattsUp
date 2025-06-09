@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Usuarios - WattsUp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="bombilla.png" alt="Logo WattsUp" width="150" height="55" />
+        </a>
+      </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="misDispositivos.html">Mis dispositivos</a></li>
+        <li><a href="simulacion.html">Simulación</a></li> 
+        <li><a href="usuarios.html">Usuarios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Selecciona una casa / usuario</h1>
+    <div id="listaUsuarios"></div>
+    <button class="boton-nuevo" onclick="nuevoUsuario()">➕ Añadir nuevo</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 WattsUp. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Notificación estética -->
+  <div id="notificacion" class="notificacion oculto"></div>
+
+  <!-- Modal de nuevo usuario -->
+  <div id="modalUsuario" class="modal oculto">
+    <div class="modal-contenido">
+      <h2>Nuevo usuario</h2>
+      <input type="text" id="inputUsuario" placeholder="Nombre del hogar o usuario" />
+      <div class="modal-botones">
+        <button onclick="confirmarNuevoUsuario()">Aceptar</button>
+        <button onclick="cerrarModalUsuario()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="cambiousuarios.js"></script>
+  <script src="usuarios.js"></script>
+</body>
+</html>

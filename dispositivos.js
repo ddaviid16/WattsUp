@@ -31,39 +31,58 @@ function filtrarProductos() {
 }
 
 function agregarDispositivo() {
+  const usuario = localStorage.getItem("usuarioActivo");
+  if (!usuario) {
+    alert("Por favor selecciona un usuario antes de agregar dispositivos.");
+    return;
+  }
+
   const select = document.getElementById("producto");
   const seleccionado = select.value;
   if (!seleccionado) return;
-  const dispositivos = JSON.parse(localStorage.getItem("misDispositivos") || "[]");
+
+  const dispositivos = JSON.parse(localStorage.getItem(`misDispositivos_${usuario}`) || "[]");
   const nuevo = JSON.parse(seleccionado);
   dispositivos.push(nuevo);
-  localStorage.setItem("misDispositivos", JSON.stringify(dispositivos));
+  localStorage.setItem(`misDispositivos_${usuario}`, JSON.stringify(dispositivos));
   renderLista();
 }
 
 function eliminarDispositivo(index) {
-  const dispositivos = JSON.parse(localStorage.getItem("misDispositivos") || "[]");
+  const usuario = localStorage.getItem("usuarioActivo");
+  if (!usuario) return;
+
+  const dispositivos = JSON.parse(localStorage.getItem(`misDispositivos_${usuario}`) || "[]");
   dispositivos.splice(index, 1);
-  localStorage.setItem("misDispositivos", JSON.stringify(dispositivos));
+  localStorage.setItem(`misDispositivos_${usuario}`, JSON.stringify(dispositivos));
   renderLista();
 }
 
 function renderLista() {
+  const usuario = localStorage.getItem("usuarioActivo");
   const lista = document.getElementById("lista");
-  if (!lista) return;
-  const dispositivos = JSON.parse(localStorage.getItem("misDispositivos") || "[]");
+  if (!lista || !usuario) return;
+
+  const dispositivos = JSON.parse(localStorage.getItem(`misDispositivos_${usuario}`) || "[]");
   lista.innerHTML = "";
   dispositivos.forEach((d, i) => {
-    const li = document.createElement("li");
-    li.textContent = d.nombre + " (" + d.consumo_por_hora + " KWh) ";
+  const li = document.createElement("li");
+const marcaClase = d.marca.toLowerCase().replace(/\s/g, ''); // elimina espacios
+li.className = `lista-dispositivo borde-${marcaClase}`;
 
-    const btn = document.createElement("button");
-    btn.textContent = "Eliminar";
-    btn.onclick = () => eliminarDispositivo(i);
+li.innerHTML = `
+  <div>
+    <strong>${d.nombre}</strong><br>
+    <small><em>Marca:</em> ${d.marca}</small><br>
+    <small>${d.consumo_por_hora} KWh</small>
+  </div>
+  <button onclick="eliminarDispositivo(${i})">Eliminar</button>
+`;
 
-    li.appendChild(btn);
+
     lista.appendChild(li);
+  
   });
 }
-
 window.onload = cargarDatos;
+
